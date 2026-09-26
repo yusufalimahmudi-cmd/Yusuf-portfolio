@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Palette, Shirt, Code, MonitorSmartphone } from 'lucide-react'
+import { useLanguage } from '@/lib/language'
 
 const services = [
   {
@@ -35,6 +36,8 @@ const services = [
 ]
 
 export function Services() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="services"
@@ -43,10 +46,10 @@ export function Services() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 max-w-2xl">
           <span className="inline-block rounded-full bg-brand-yellow px-3 py-1 text-sm font-semibold text-brand-ink">
-            What I do
+            {t('What I do')}
           </span>
           <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tighter text-balance sm:text-6xl">
-            Services built for brands with personality.
+            {t('Services built for brands with personality.')}
           </h2>
         </div>
 
@@ -72,10 +75,10 @@ export function Services() {
                   <Icon className="size-7 text-brand-ink" />
                 </div>
                 <h3 className="font-display text-2xl font-extrabold tracking-tight">
-                  {service.title}
+                  {t(service.title)}
                 </h3>
                 <p className="mt-2 leading-relaxed text-muted-foreground">
-                  {service.desc}
+                  {t(service.desc)}
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {service.tags.map((tag) => (
@@ -83,7 +86,7 @@ export function Services() {
                       key={tag}
                       className="rounded-full border border-brand-ink px-3 py-1 text-xs font-semibold"
                     >
-                      {tag}
+                      {t(tag)}
                     </span>
                   ))}
                 </div>

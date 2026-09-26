@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/lib/language'
 
 const stats = [
   { value: '3+', label: 'Years exploring design' },
@@ -10,6 +11,8 @@ const stats = [
 ]
 
 export function About() {
+  const { t } = useLanguage()
+
   return (
     <section id="about" className="px-4 py-20 sm:px-6 sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -23,14 +26,14 @@ export function About() {
           <div className="overflow-hidden rounded-4xl border-2 border-brand-ink shadow-[6px_6px_0_0_var(--brand-ink)]">
             <Image
               src="/yusuf.jpg"
-              alt="Portrait of Momo Adisa"
+              alt={t('Portrait of Momo Adisa')}
               width={720}
               height={860}
               className="h-full w-full object-cover"
             />
           </div>
           <span className="absolute -bottom-4 -right-4 rotate-6 rounded-full border-2 border-brand-ink bg-brand-yellow px-4 py-2 font-display font-extrabold shadow-[3px_3px_0_0_var(--brand-ink)]">
-            Hi there!
+            {t('Hi there!')}
           </span>
         </motion.div>
 
@@ -42,21 +45,18 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="font-display text-4xl font-extrabold tracking-tighter text-balance sm:text-6xl"
           >
-            A creator who
+            {t('A creator who')}
             <br />
-            <span className="text-brand-pink">blends code</span> with the canvas.
+            <span className="text-brand-pink">{t('blends code')}</span>
+            {t(' with the canvas.')}
           </motion.h2>
 
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I started out designing in the creative space and never really looked back. 
-                Today I work across web development, UI/UX, and apparel design — 
-                helping projects and brands find a distinct digital and visual voice.
+                {t('I started out designing in the creative space and never really looked back. Today I work across web development, UI/UX, and apparel design — helping projects and brands find a distinct digital and visual voice.')}
               </p>
               <p>
-                My approach is simple: take the work seriously, but never 
-                yourself. The best ideas come from play, curiosity, and a little 
-                bit of experimentation.
+                {t('My approach is simple: take the work seriously, but never yourself. The best ideas come from play, curiosity, and a little bit of experimentation.')}
               </p>
             </div>
 
@@ -70,7 +70,7 @@ export function About() {
                   {stat.value}
                 </div>
                 <div className="mt-1 text-xs font-medium text-muted-foreground sm:text-sm">
-                  {stat.label}
+                  {t(stat.label)}
                 </div>
               </div>
             ))}

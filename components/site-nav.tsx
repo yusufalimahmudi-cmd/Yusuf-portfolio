@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { useLanguage } from '@/lib/language'
 
 const links = [
   { label: 'Work', href: '#work' },
@@ -14,6 +15,7 @@ const links = [
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { language, toggleLanguage, t } = useLanguage()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -52,26 +54,40 @@ export function SiteNav() {
               href={link.href}
               className="rounded-full px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-brand-yellow"
             >
-              {link.label}
+              {t(link.label)}
             </a>
           ))}
           <a
             href="#contact"
             className="rounded-full bg-brand-pink px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-            Let&apos;s talk
+            {t("Let's talk")}
           </a>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          className="flex size-11 items-center justify-center rounded-full border-2 border-brand-ink bg-card shadow-[3px_3px_0_0_var(--brand-ink)] md:hidden"
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleLanguage}
+            aria-label={t(
+              language === 'en'
+                ? 'Switch language to Indonesian'
+                : 'Switch language to English',
+            )}
+            className="flex h-11 items-center justify-center rounded-full border-2 border-brand-ink bg-card px-4 text-sm font-bold shadow-[3px_3px_0_0_var(--brand-ink)]"
+          >
+            {language === 'en' ? 'ID' : 'EN'}
+          </button>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={t(open ? 'Close menu' : 'Open menu')}
+            aria-expanded={open}
+            className="flex size-11 items-center justify-center rounded-full border-2 border-brand-ink bg-card shadow-[3px_3px_0_0_var(--brand-ink)] md:hidden"
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </motion.nav>
 
       <AnimatePresence>
@@ -90,7 +106,7 @@ export function SiteNav() {
                 onClick={() => setOpen(false)}
                 className="block rounded-2xl px-4 py-3 text-lg font-semibold hover:bg-brand-yellow"
               >
-                {link.label}
+                {t(link.label)}
               </a>
             ))}
             <a
@@ -98,7 +114,7 @@ export function SiteNav() {
               onClick={() => setOpen(false)}
               className="mt-1 block rounded-2xl bg-brand-pink px-4 py-3 text-center text-lg font-semibold text-primary-foreground"
             >
-              Let&apos;s talk
+              {t("Let's talk")}
             </a>
           </motion.div>
         )}

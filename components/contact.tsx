@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Check } from 'lucide-react'
+import { useLanguage } from '@/lib/language'
 
 const socials = [
   { label: 'Instagram', href: 'https://www.instagram.com/ysfali_252/' },
@@ -15,6 +16,7 @@ const socials = [
 export function Contact() {
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
+  const { t } = useLanguage()
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -38,12 +40,12 @@ export function Contact() {
       } else {
         console.error('Error:', data)
         setLoading(false)
-        alert('Gagal mengirim pesan, silakan coba lagi.')
+        alert(t('Failed to send the message. Please try again.'))
       }
     } catch (error) {
       console.error('Error:', error)
       setLoading(false)
-      alert('Terjadi kesalahan jaringan.')
+      alert(t('A network error occurred.'))
     }
   }
 
@@ -60,13 +62,12 @@ export function Contact() {
           <div className="grid gap-8 p-8 sm:p-12 lg:grid-cols-2 lg:gap-12">
             <div className="text-primary-foreground">
               <h2 className="font-display text-4xl font-extrabold leading-[0.95] tracking-tighter text-balance sm:text-6xl">
-                Got a project?
+                    {t('Got a project?')}
                 <br />
-                Let&apos;s make it loud.
+                    {t("Let's make it loud.")}
               </h2>
               <p className="mt-5 max-w-md text-lg leading-relaxed text-primary-foreground/90">
-                Tell me a little about what you&apos;re working on. I reply to
-                every message within a couple of days.
+                {t("Tell me a little about what you're working on. I reply to every message within a couple of days.")}
               </p>
 
               <div className="mt-8">
@@ -99,16 +100,16 @@ export function Contact() {
                     <Check className="size-8" />
                   </div>
                   <h3 className="mt-5 font-display text-2xl font-extrabold tracking-tight">
-                    Message sent!
+                    {t('Message sent!')}
                   </h3>
                   <p className="mt-2 text-muted-foreground">
-                    Thanks for reaching out — I&apos;ll be in touch soon.
+                    {t("Thanks for reaching out — I'll be in touch soon.")}
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
-                    <Field label="Name" name="name" placeholder="Jane Doe" />
+                    <Field label={t('Name')} name="name" placeholder="Jane Doe" />
                     <Field
                       label="Email"
                       name="email"
@@ -117,23 +118,23 @@ export function Contact() {
                     />
                   </div>
                   <Field
-                    label="Project type"
+                    label={t('Project type')}
                     name="type"
-                    placeholder="Web, apparel, branding…"
+                    placeholder={t('Web, apparel, branding…')}
                   />
                   <div>
                     <label
                       htmlFor="message"
                       className="mb-1.5 block text-sm font-semibold"
                     >
-                      Message
+                      {t('Message')}
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       rows={4}
                       required
-                      placeholder="Tell me about your project…"
+                      placeholder={t('Tell me about your project…')}
                       className="w-full rounded-2xl border-2 border-brand-ink bg-background px-4 py-3 text-foreground outline-none transition-shadow placeholder:text-muted-foreground focus:shadow-[3px_3px_0_0_var(--brand-ink)]"
                     />
                   </div>
@@ -142,7 +143,7 @@ export function Contact() {
                     disabled={loading}
                     className="group flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-ink py-4 font-display text-lg font-bold text-background transition-transform hover:-translate-y-0.5 disabled:opacity-50"
                   >
-                    {loading ? 'Sending...' : 'Send message'}
+                    {loading ? t('Sending...') : t('Send message')}
                     <ArrowUpRight className="size-5 transition-transform group-hover:rotate-45" />
                   </button>
                 </form>
@@ -152,9 +153,9 @@ export function Contact() {
         </motion.div>
 
         <footer className="mt-16 flex flex-col items-center justify-between gap-4 border-t-2 border-brand-ink pt-8 text-sm font-medium text-muted-foreground sm:flex-row">
-          <p>© 2026 Yusuf Ali Mahmudi (Yusuf Digital Creative). All rights reserved.</p>
+          <p>{t('© 2026 Yusuf Ali Mahmudi (Yusuf Digital Creative). All rights reserved.')}</p>
           <p>
-            Designed &amp; built with passion in Indonesia.
+            {t('Designed & built with passion in Indonesia.')}
           </p>
         </footer>
       </div>

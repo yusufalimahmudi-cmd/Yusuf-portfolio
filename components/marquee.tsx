@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/lib/language'
 
 const items = [
   'Web Development',
@@ -12,6 +13,7 @@ const items = [
 ]
 
 export function Marquee() {
+  const { t } = useLanguage()
   const row = [...items, ...items]
 
   return (
@@ -26,7 +28,7 @@ export function Marquee() {
             key={i}
             className="flex items-center gap-8 font-display text-2xl font-extrabold tracking-tight text-primary-foreground sm:text-3xl"
           >
-            {item}
+            {t(item)}
             <span
               className="inline-block size-3 rounded-full bg-brand-yellow"
               aria-hidden="true"

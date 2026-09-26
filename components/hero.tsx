@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowUpRight, Sparkles } from 'lucide-react'
+import { useLanguage } from '@/lib/language'
 
 const container = {
   hidden: {},
@@ -20,6 +21,8 @@ const item = {
 }
 
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <section
       id="top"
@@ -37,18 +40,18 @@ export function Hero() {
           className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-brand-ink bg-brand-yellow px-4 py-1.5 text-sm font-semibold"
         >
           <Sparkles className="size-4" />
-          Available for freelance — 2026
+          {t('Available for freelance — 2026')}
         </motion.div>
 
         <h1 className="font-display text-6xl font-extrabold leading-[0.9] tracking-tighter text-balance sm:text-8xl lg:text-[9.5rem]">
           <motion.span variants={item} className="block">
-            Crafting digital
+            {t('Crafting digital')}
           </motion.span>
           <motion.span variants={item} className="block">
-            <span className="text-brand-pink">visuals</span> & web
+            <span className="text-brand-pink">{t('visuals')}</span> {t('& web')}
           </motion.span>
           <motion.span variants={item} className="block">
-            that <span className="text-brand-blue">stand out</span>.
+            {t('that')} <span className="text-brand-blue">{t('stand out')}</span>.
           </motion.span>
         </h1>
 
@@ -57,9 +60,9 @@ export function Hero() {
             variants={item}
             className="max-w-xl text-lg leading-relaxed text-muted-foreground"
           >
-            {
-              "I'm Yusuf Ali Mahmudi. Balancing my studies in Agro-industrial Technology with a passion for digital crafting, I design intuitive web experiences and bold apparel that help brands stand out."
-            }
+            {t(
+              "I'm Yusuf Ali Mahmudi. Balancing my studies in Agro-industrial Technology with a passion for digital crafting, I design intuitive web experiences and bold apparel that help brands stand out.",
+            )}
           </motion.p>
 
           <motion.a
@@ -67,7 +70,7 @@ export function Hero() {
             href="#work"
             className="group inline-flex items-center gap-3 rounded-full bg-brand-ink px-7 py-4 text-lg font-semibold text-background transition-transform hover:-translate-y-1"
           >
-            See the work
+            {t('See the work')}
             <span className="flex size-8 items-center justify-center rounded-full bg-brand-pink text-primary-foreground transition-transform group-hover:rotate-45">
               <ArrowUpRight className="size-5" />
             </span>

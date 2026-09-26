@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { ProjectModal } from './ui/project-modal'
+import { useLanguage } from '@/lib/language'
 
 type Project = {
   title: string
@@ -126,6 +127,8 @@ const projects: Project[] = [
 ]
 
 function ProjectCard({ project, onClick }: { project: Project; onClick: () => void }) {
+  const { t } = useLanguage()
+
   return (
     <motion.article
       onClick={onClick}
@@ -138,7 +141,7 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
       <div className="relative min-h-56 flex-1 overflow-hidden">
         <Image
           src={project.image || '/placeholder.svg'}
-          alt={`${project.title} — ${project.category} project`}
+          alt={`${t(project.title)} — ${t(project.category)} ${t('project')}`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 1024px) 100vw, 50vw"
@@ -146,7 +149,7 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
         <button
           onClick={onClick}
           className={`absolute right-4 top-4 flex size-11 items-center justify-center rounded-full border-2 border-brand-ink ${project.accent} translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 hover:scale-110 active:scale-95`}
-          aria-label={`View ${project.title} details`}
+          aria-label={`${t('View ')}${t(project.title)}${t(' details')}`}
         >
           <ArrowUpRight className="size-5 text-brand-ink" />
         </button>
@@ -154,10 +157,10 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
       <div className="flex items-end justify-between gap-4 p-5">
         <div>
           <span className="inline-block rounded-full border border-brand-ink px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide">
-            {project.category}
+            {t(project.category)}
           </span>
           <h3 className="mt-3 font-display text-2xl font-extrabold leading-tight tracking-tight">
-            {project.title}
+            {t(project.title)}
           </h3>
         </div>
         <span className="font-display text-lg font-bold text-muted-foreground">
@@ -170,6 +173,7 @@ function ProjectCard({ project, onClick }: { project: Project; onClick: () => vo
 
 export function WorkGallery() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const { t } = useLanguage()
 
   return (
     <>
@@ -177,11 +181,10 @@ export function WorkGallery() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
             <h2 className="font-display text-4xl font-extrabold tracking-tighter text-balance sm:text-6xl">
-              Selected work
+              {t('Selected work')}
             </h2>
             <p className="max-w-sm text-muted-foreground">
-              A mix of brand, motion, and print projects — each one built to stand
-              out and stay memorable.
+              {t('A mix of brand, motion, and print projects — each one built to stand out and stay memorable.')}
             </p>
           </div>
 
