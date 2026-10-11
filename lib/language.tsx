@@ -108,21 +108,24 @@ const translations: Record<string, string> = {
   'Production management': 'Manajemen produksi',
   'Design System': 'Sistem Desain',
   'Animation Assist': 'Animation Assist',
-  'Bloom & Co. Rebrand': 'Rebranding Bloom & Co.',
+  'F&B UMKM Visual Identity': 'Identitas Visual UMKM F&B',
   'Kinetic Type Reel': 'Reel Tipografi Kinetik',
   'Riso Quarterly': 'Riso Quarterly',
   'Fizz Soda Co.': 'Fizz Soda Co.',
   'Playground OS': 'Playground OS',
   'Doodle Friends': 'Doodle Friends',
-  'Complete visual identity redesign for sustainable beauty brand Bloom & Co., featuring a modern logo system, color palette, and brand guidelines.':
-    'Perancangan ulang identitas visual menyeluruh untuk brand kecantikan berkelanjutan Bloom & Co., mencakup sistem logo modern, palet warna, dan panduan brand.',
-  "The previous brand identity felt dated and didn't communicate the brand's commitment to sustainability and innovation. The design needed to appeal to eco-conscious millennials while maintaining premium positioning.":
-    'Identitas brand sebelumnya terasa usang dan belum menunjukkan komitmen terhadap keberlanjutan serta inovasi. Desain baru perlu menarik bagi generasi milenial yang peduli lingkungan tanpa menghilangkan kesan premium.',
-  'Created a bold, nature-inspired logo featuring an interlocking flower motif. Developed a vibrant but sophisticated color palette emphasizing natural tones with energetic accent colors. Built comprehensive brand guidelines covering typography, imagery, and application patterns.':
-    'Menciptakan logo berani yang terinspirasi alam dengan motif bunga saling bertaut. Mengembangkan palet warna yang cerah namun elegan, memadukan warna alami dengan aksen energik. Menyusun panduan brand menyeluruh untuk tipografi, citra, dan penerapan desain.',
-  'Brand recognition increased by 48% in target demographic': 'Pengenalan brand meningkat 48% pada target demografis',
-  'Social media engagement up 156% in first 3 months': 'Interaksi media sosial naik 156% dalam 3 bulan pertama',
-  'Product packaging won design award for sustainability communication': 'Kemasan produk memenangkan penghargaan desain untuk komunikasi keberlanjutan',
+
+//umkm ----
+  'Vibrant visual identity and promotional assets for local F&B businesses, featuring expressive logo designs and custom merchandise to elevate brand presence.':
+    'Pengembangan identitas visual dan aset promosi untuk UMKM kuliner, mencakup desain logo yang ekspresif dan merchandise (kaos) untuk meningkatkan daya tarik brand. ',
+  "Local street food vendors often struggle to stand out in a crowded market due to a lack of strong visual branding. The challenge was to create a modern, playful, and eye-catching identity that appeals to a younger demographic while maintaining the approachable nature of local UMKM products.":
+    'Produk kuliner seringkali kurang menonjol karena tidak memiliki identitas visual yang kuat. Tantangannya adalah merancang desain yang modern, playful, dan eye-catching untuk menarik pasar anak muda, sambil tetap mempertahankan kesan ramah dari produk UMKM.',
+  'Designed bold, expressive typography logos with high-contrast neon color palettes (pink, green, and orange) for brands like "Pisang Hijau" and "Pentol Gokil". Applied the brand assets to physical merchandise (black t-shirts) to give the businesses a more professional and established streetwear aesthetic.':
+    'Menciptakan tipografi logo yang berani dengan palet warna kontras (neon pink, hijau, dan oranye) untuk brand Pisang Hijau dan Pentol Gokil. Mengaplikasikan desain tersebut ke dalam bentuk merchandise kaos agar brand UMKM tampil lebih profesional dan stand out.',
+  'Elevated the professional perception and visual appeal of local culinary brands': 'Meningkatkan persepsi profesionalitas dan nilai jual UMKM',
+  'Created effective "walking promotions" through striking merchandise design': 'Desain merchandise menciptakan peluang promosi berjalan yang efektif',
+  'Established strong brand recall and visual consistency across assets': 'Memperkuat brand awareness dan kemudahan diingat oleh pelanggan',
+
   'Animated motion graphics reel showcasing kinetic typography techniques and 3D animation for a creative agency portfolio.':
     'Reel motion graphics animasi yang menampilkan teknik tipografi kinetik dan animasi 3D untuk portofolio agensi kreatif.',
   'Needed to create an eye-catching portfolio piece that demonstrated advanced motion design skills while remaining visually cohesive and narrative-driven.':
@@ -132,6 +135,7 @@ const translations: Record<string, string> = {
   'Viewed over 50k times on Vimeo': 'Ditonton lebih dari 50 ribu kali di Vimeo',
   'Featured in Motion Design Magazine': 'Ditampilkan di Motion Design Magazine',
   'Led to 5 freelance project inquiries': 'Menghasilkan 5 permintaan proyek lepas',
+
   'Art direction and layout design for a independent publication focused on risograph printing, featuring experimental typography and vibrant color work.':
     'Arahan seni dan desain tata letak untuk publikasi independen tentang cetak risograf, dengan tipografi eksperimental dan warna-warna cerah.',
   'Create a distinctive editorial identity that celebrates the unique aesthetic of risograph printing while maintaining readability and hierarchy across diverse content types.':
@@ -141,6 +145,7 @@ const translations: Record<string, string> = {
   '500 copies sold at independent bookfairs': '500 eksemplar terjual di pameran buku independen',
   'Featured in Print Magazine': 'Ditampilkan di Print Magazine',
   'Received 2 design competition nominations': 'Menerima 2 nominasi kompetisi desain',
+
   'Complete packaging design system for a retro-inspired soda brand, including label design, secondary packaging, and brand collateral.':
     'Sistem desain kemasan lengkap untuk brand soda bernuansa retro, mencakup desain label, kemasan sekunder, dan materi brand.',
   'Stand out on retail shelves in a crowded beverage category while conveying a playful, nostalgic brand personality that appeals to Gen Z consumers.':
@@ -150,6 +155,7 @@ const translations: Record<string, string> = {
   'Launched in 200+ retail locations': 'Diluncurkan di lebih dari 200 lokasi ritel',
   'First month sales exceeded projections by 34%': 'Penjualan bulan pertama melampaui proyeksi sebesar 34%',
   'Featured in packaging design blogs and publications': 'Ditampilkan di blog dan publikasi desain kemasan',
+
   'UI/UX design and front-end development for an interactive learning platform targeting young designers and developers.':
     'Desain UI/UX dan pengembangan front-end untuk platform belajar interaktif bagi desainer dan developer muda.',
   'Design an engaging digital learning experience that maintains user motivation across multiple skill levels while staying responsive and accessible.':
@@ -159,6 +165,7 @@ const translations: Record<string, string> = {
   '2,000+ users in beta launch': 'Lebih dari 2.000 pengguna saat peluncuran beta',
   '87% course completion rate': 'Tingkat penyelesaian kursus 87%',
   'Average session duration of 23 minutes': 'Durasi sesi rata-rata 23 menit',
+
   "Character design and illustration series for a children's digital literacy app, featuring 50+ unique characters and environmental assets.":
     'Seri desain karakter dan ilustrasi untuk aplikasi literasi digital anak, dengan lebih dari 50 karakter unik dan aset lingkungan.',
   'Create distinct, memorable characters that appeal to both children and parents while maintaining consistent style across a large asset library.':

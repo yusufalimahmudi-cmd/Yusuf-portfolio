@@ -23,21 +23,21 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: 'Bloom & Co. Rebrand',
-    category: 'Brand Identity',
+    title: 'F&B UMKM Visual Identity',
+    category: 'Brand Identity & Merchandise',
     year: '2025',
-    image: '/work/web.png',
-    accent: 'bg-brand-pink',
+    image: '/work/umkm.png',
+    accent: 'bg-brand-pink', 
     span: 'lg:col-span-3 lg:row-span-2',
-    description: 'Complete visual identity redesign for sustainable beauty brand Bloom & Co., featuring a modern logo system, color palette, and brand guidelines.',
-    challenge: 'The previous brand identity felt dated and didn\'t communicate the brand\'s commitment to sustainability and innovation. The design needed to appeal to eco-conscious millennials while maintaining premium positioning.',
-    solution: 'Created a bold, nature-inspired logo featuring an interlocking flower motif. Developed a vibrant but sophisticated color palette emphasizing natural tones with energetic accent colors. Built comprehensive brand guidelines covering typography, imagery, and application patterns.',
+    description: 'Vibrant visual identity and promotional assets for local F&B businesses, featuring expressive logo designs and custom merchandise to elevate brand presence.',
+    challenge: 'Local street food vendors often struggle to stand out in a crowded market due to a lack of strong visual branding. The challenge was to create a modern, playful, and eye-catching identity that appeals to a younger demographic while maintaining the approachable nature of local UMKM products.',
+    solution: 'Designed bold, expressive typography logos with high-contrast neon color palettes (pink, green, and orange) for brands like "Pisang Hijau" and "Pentol Gokil". Applied the brand assets to physical merchandise (black t-shirts) to give the businesses a more professional and established streetwear aesthetic.',
     results: [
-      'Brand recognition increased by 48% in target demographic',
-      'Social media engagement up 156% in first 3 months',
-      'Product packaging won design award for sustainability communication'
+      'Elevated the professional perception and visual appeal of local culinary brands',
+      'Created effective "walking promotions" through striking merchandise design',
+      'Established strong brand recall and visual consistency across assets'
     ],
-    tools: ['Adobe Illustrator', 'Adobe InDesign', 'Figma', 'Brand Strategy']
+    tools: ['Adobe Illustrator', 'Adobe Photoshop', 'CorelDRAW', 'Typography Design', 'Merchandise Mockups']
   },
   {
     title: 'Kinetic Type Reel',
