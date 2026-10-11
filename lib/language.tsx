@@ -42,7 +42,7 @@ const translations: Record<string, string> = {
   'View ': 'Lihat detail ',
   ' details': '',
   'project': 'proyek',
-  'Portrait of Momo Adisa': 'Potret Yusuf Ali Mahmudi',
+  'Portrait of Yusuf Ali Mahmudi': 'Potret Yusuf Ali Mahmudi',
   'Hi there!': 'Hai!',
   'A creator who': 'Kreator yang',
   'blends code': 'memadukan kode',

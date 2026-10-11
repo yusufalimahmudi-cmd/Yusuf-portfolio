@@ -26,7 +26,7 @@ export function About() {
           <div className="overflow-hidden rounded-4xl border-2 border-brand-ink shadow-[6px_6px_0_0_var(--brand-ink)]">
             <Image
               src="/yusuf.jpg"
-              alt={t('Portrait of Momo Adisa')}
+              alt={t('Portrait of Yusuf Ali Mahmudi')}
               width={720}
               height={860}
               className="h-full w-full object-cover"

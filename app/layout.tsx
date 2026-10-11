@@ -17,26 +17,26 @@ const bricolage = Bricolage_Grotesque({
 })
 
 export const metadata: Metadata = {
-  title: 'Momo Adisa — Multidisciplinary Creative',
+  title: 'Yusuf Ali Mahmudi — Digital & Visual Creative',
   description:
-    'Momo Adisa is a multidisciplinary creative crafting brands, motion, packaging, and playful digital experiences. Explore selected work and start a project.',
+    'Yusuf Ali Mahmudi is a digital and visual creative crafting web experiences, UI/UX, and apparel design. Explore selected work and start a project.',
   generator: 'v0.app',
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url: '/OC.jpg',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url: '/OC.jpg',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url: '/OC.jpg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/OC.jpg',
   },
 }
 
